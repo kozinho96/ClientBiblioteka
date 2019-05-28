@@ -1,0 +1,33 @@
+#container{
+  background-color: rgba(0,0,0,.7);
+  border-style: solid;
+  border-width: 1px;
+  background-position: center top;
+  background-size: 70% 120px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  display: flex;
+  flex-flow: column;
+  z-index: 1;
+  margin-bottom: 1%;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+nav
+{
+  display: flex;
+  margin-left: 100px;
+}
+img
+{
+  opacity: 0.9;
+  display: flex;
+  justify-self: flex-start;
+}
+h1{
+  font-family: Lobster;
+  color: white;
+}
