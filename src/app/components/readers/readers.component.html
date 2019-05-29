@@ -1,0 +1,19 @@
+<body>
+<h1 style="color: white">Czytelnicy</h1>
+<table>
+  <tr style='font-weight:bold;'>
+    <td>PESEL</td>
+    <td>IMIĘ</td>
+    <td>NAZWISKO</td>
+    <td>E-MAIL</td>
+    <td>ADRES</td>
+  </tr>
+  <tr *ngFor="let us of user">
+    <td>{{us.pesel}}</td>
+    <td>{{us.name}}</td>
+    <td>{{us.lastName}}</td>
+    <td>{{us.eMail}}</td>
+    <td>{{us.address}}</td>
+  </tr>
+</table>
+</body>

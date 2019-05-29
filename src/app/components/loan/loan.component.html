@@ -1,0 +1,19 @@
+<body>
+<h1 style="color: white">Wypożyczenia</h1>
+<table>
+  <tr style='font-weight:bold;'>
+    <td>KSIĄŻKA</td>
+    <td>CZYTELNIK</td>
+    <td>DATA WYPOŻYCZENIA</td>
+    <td>DATA ZWROTU</td>
+  </tr>
+  <tr *ngFor="let lo of loan">
+    <td>{{lo.idCopy.idBook.title}}</td>
+    <td>{{lo.idUser.name}} {{lo.idUser.lastName}}</td>
+    <td>{{lo.dataLoan | date : "fullDate"}}</td>
+    <td>{{lo.dataReturn | date : "fullDate"}}</td>
+  </tr>
+</table>
+
+
+

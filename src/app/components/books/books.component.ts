@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {DataService} from '../../services/data.service';
 
 @Component({
   selector: 'books',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BooksComponent implements OnInit {
 
-  constructor() { }
+  book: Object;
+
+
+  constructor(private data: DataService) {
+  }
 
   ngOnInit() {
+    this.data.getBooks().subscribe(response =>
+      this.book = response);
   }
 
 }

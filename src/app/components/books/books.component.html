@@ -1,3 +1,19 @@
-<p>
-  books works!
-</p>
+<body>
+<h1 style="color: white">Książki</h1>
+<table>
+  <tr style='font-weight:bold;'>
+    <td>TYTUŁ</td>
+    <td>AUTOR</td>
+    <td>GATUNEK</td>
+    <td>OPIS</td>
+  </tr>
+  <tr *ngFor="let bo of book">
+    <td><a [routerLink]="['/comments/',bo.idBook]">{{bo.title}}</a></td>
+    <td>{{bo.idAuthor.name}} {{bo.idAuthor.lastName}}</td>
+    <td>{{bo.type}}</td>
+    <td>{{bo.description}}</td>
+  </tr>
+</table>
+
+
+

@@ -7,6 +7,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import {HomeComponent} from './components/home/home.component';
 import { BooksComponent } from './components/books/books.component';
 import { ReservationComponent } from './components/reservation/reservation.component';
+import { LoanComponent } from './components/loan/loan.component';
+import { ReadersComponent } from './components/readers/readers.component';
+import {HttpClientModule} from '@angular/common/http';
+import { CommentsComponent } from './components/comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +18,15 @@ import { ReservationComponent } from './components/reservation/reservation.compo
     NavbarComponent,
     HomeComponent,
     BooksComponent,
-    ReservationComponent
+    ReservationComponent,
+    LoanComponent,
+    ReadersComponent,
+    CommentsComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
