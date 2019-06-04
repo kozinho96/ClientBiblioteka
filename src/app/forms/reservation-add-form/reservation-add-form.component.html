@@ -1,0 +1,25 @@
+<html>
+<body>
+<h1>Rezerwacja książki</h1>
+<form [formGroup]="reservation" (ngSubmit)="onSubmit()">
+
+  <label>
+    Data rezerwacji:
+    <input type="text" formControlName="dateReserwation">
+  </label>
+
+  <label>
+    idUser:
+    <input type="text" formControlName="idUser">
+  </label>
+
+  <label>
+    idBook:
+    <input type="text" formControlName="idBook">
+  </label>
+
+
+  <button type="submit" [disabled]="!reservation.valid">Zarezerwuj książke</button>
+</form>
+</body>
+</html>

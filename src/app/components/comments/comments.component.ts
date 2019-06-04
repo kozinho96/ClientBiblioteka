@@ -9,7 +9,8 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class CommentsComponent implements OnInit {
 
-  public idBook: number;
+  public idBook: string;
+
   comment: Object;
 
   constructor(private data: DataService,
@@ -17,16 +18,16 @@ export class CommentsComponent implements OnInit {
   }
 
   ngOnInit() {
-    let idBook: string;
     this.route.paramMap
       .subscribe(params => {
-        idBook = params.get('idBook');
+        this.idBook = params.get('id');
       });
-    if (1) {
-      this.data.getComments(1).subscribe(response =>
-        this.comment = response);
+    if (true) {
+      this.data.getComments(this.idBook).subscribe(response => {
+        this.comment = response;
+      });
     } else {
-      this.idBook = 1;
     }
   }
 }
+

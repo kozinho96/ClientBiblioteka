@@ -1,0 +1,39 @@
+<html>
+<body>
+<h1>Dodawanie czytelnika</h1>
+<form [formGroup]="users" (ngSubmit)="onSubmit()">
+
+  <label>
+    Imię:
+    <input type="text" formControlName="name">
+  </label>
+
+  <label>
+    Nazwisko:
+    <input type="text" formControlName="lastName">
+  </label>
+
+  <label>
+    PESEL:
+    <input type="text" formControlName="pesel">
+  </label>
+
+  <label>
+    E-mail:
+    <input type="text" formControlName="eMail">
+  </label>
+
+  <label>
+    Password:
+    <input type="password" formControlName="password">
+  </label>
+
+  <label>
+    Adres:
+    <input type="text" formControlName="address">
+  </label>
+
+  <button type="submit" [disabled]="!users.valid">Dodaj czytelnika</button>
+</form>
+</body>
+</html>

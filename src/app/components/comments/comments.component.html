@@ -1,18 +1,22 @@
 <body>
 <h1 style="color: white">Komentarze</h1>
-<!--<table>-->
-  <!--<tr style='font-weight:bold;'>-->
-    <!--<td>TYTUŁ</td>-->
-    <!--<td>KOMENTARZ</td>-->
-    <!--<td>CZYTELNIK</td>-->
-  <!--</tr>-->
-  <!--<tr *ngFor="let co of comment">-->
-    <!--<td>{{co.idComment}}</td>-->
-    <!--<td>{{co.contentComment}}</td>-->
-    <!--<td>{{co.idUser.name}} {{co.idUser.lastName}}</td>-->
-  <!--</tr>-->
-<!--</table>-->
-{{contentComment}}
+<a style="color: white" [routerLink]="['/commentsAdd']">
+  <button>
+    Dodaj komantarz
+  </button>
+</a>
+<table>
+  <tr style='font-weight:bold;'>
+    <td>TYTUŁ</td>
+    <td>KOMENTARZ</td>
+    <td>CZYTELNIK</td>
+  </tr>
+  <tr *ngFor="let co of comment">
+    <td>{{co.idBook.title}}</td>
+    <td>{{co.contentComment}}</td>
+    <td>{{co.idUser.name}} {{co.idUser.lastName}}</td>
+  </tr>
+</table>
 </body>
 
 

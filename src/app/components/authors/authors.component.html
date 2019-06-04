@@ -1,0 +1,20 @@
+<body>
+<h1 style="color: white">Autorzy</h1>
+<a style="color: white" [routerLink]="['/authorsAdd']">
+  <button>
+    Dodaj autora
+  </button>
+</a>
+<table>
+  <tr style='font-weight:bold;'>
+    <td>ID_AUTORA</td>
+    <td>IMIĘ</td>
+    <td>NAZWISKO</td>
+  </tr>
+  <tr *ngFor="let au of author">
+    <td>{{au.idAuthor}}</td>
+    <td>{{au.name}}</td>
+    <td>{{au.lastName}}</td>
+  </tr>
+</table>
+</body>

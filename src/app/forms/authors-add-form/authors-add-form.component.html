@@ -1,0 +1,19 @@
+<html>
+<body>
+<h1>Dodawanie autora</h1>
+<form [formGroup]="authors" (ngSubmit)="onSubmit()">
+
+  <label>
+    Imię:
+    <input type="text" formControlName="name">
+  </label>
+
+  <label>
+    Nazwisko:
+    <input type="text" formControlName="lastName">
+  </label>
+
+  <button type="submit" [disabled]="!authors.valid">Dodaj autora</button>
+</form>
+</body>
+</html>

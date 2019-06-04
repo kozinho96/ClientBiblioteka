@@ -1,0 +1,24 @@
+<html>
+<body>
+<h1>Dodawanie komenatarza</h1>
+<form [formGroup]="comments" (ngSubmit)="onSubmit()">
+
+  <label>
+    Treść komentarza:
+    <input type="text" formControlName="contentComment">
+  </label>
+
+  <label>
+    idUser:
+    <input type="text" formControlName="idUser">
+  </label>
+
+  <label>
+    idBook:
+    <input type="text" formControlName="idBook">
+  </label>
+
+  <button type="submit" [disabled]="!comments.valid">Dodaj komentarz</button>
+</form>
+</body>
+</html>

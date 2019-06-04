@@ -1,0 +1,32 @@
+<html>
+<body>
+<h1>Dodawanie książki</h1>
+<form [formGroup]="books" (ngSubmit)="onSubmit()">
+
+  <label>
+    Tytuł:
+    <input type="text" formControlName="title">
+  </label>
+
+  <label>
+    Opis:
+    <input type="text" formControlName="description">
+  </label>
+
+  <label>
+    Gatunek:
+    <input type="text" formControlName="type">
+  </label>
+
+  <label>
+    idAutora:
+    <input type="text" formControlName="idAuthor">
+  </label>
+
+
+  <button type="submit" [disabled]="!books.valid">Dodaj książkę</button>
+</form>
+<app-authors></app-authors>
+</body>
+</html>
+

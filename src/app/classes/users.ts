@@ -3,5 +3,6 @@ export class Users {
   lastName: string;
   pesel: number;
   eMail: string;
+  password: string;
   address: string;
 }
