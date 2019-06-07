@@ -1,0 +1,16 @@
+<html>
+<body>
+<h1>Dodawanie egzemplarza</h1>
+<form [formGroup]="copy" (ngSubmit)="onSubmit()">
+
+  <label>
+    idBook:
+    <input type="text" formControlName="idBook">
+  </label>
+
+
+  <button type="submit" [disabled]="!copy.valid">Dodaj egzemplarz</button>
+</form>
+</body>
+</html>
+

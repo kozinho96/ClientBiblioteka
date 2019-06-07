@@ -11,6 +11,10 @@ import {AuthorsComponent} from './components/authors/authors.component';
 import {AuthorsAddFormComponent} from './forms/authors-add-form/authors-add-form.component';
 import {ReservationAddFormComponent} from './forms/reservation-add-form/reservation-add-form.component';
 import {CommentsAddFormComponent} from './forms/comments-add-form/comments-add-form.component';
+import {ReservationsComponent} from './components/reservations/reservations.component';
+import {LoanAddFormComponent} from './forms/loan-add-form/loan-add-form.component';
+import {CopyComponent} from './components/copy/copy.component';
+import {CopyAddFormComponent} from './forms/copy-add-form/copy-add-form.component';
 
 const routes: Routes = [
   {
@@ -56,6 +60,22 @@ const routes: Routes = [
   {
     path: 'commentsAdd',
     component: CommentsAddFormComponent
+  },
+  {
+    path: 'reservations',
+    component: ReservationsComponent
+  },
+  {
+    path: 'loanAdd',
+    component: LoanAddFormComponent
+  },
+  {
+    path: 'copy',
+    component: CopyComponent
+  },
+  {
+    path: 'copyAdd',
+    component: CopyAddFormComponent
   },
 ];
 

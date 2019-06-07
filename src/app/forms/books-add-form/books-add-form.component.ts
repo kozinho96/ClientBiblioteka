@@ -23,7 +23,7 @@ export class BooksAddFormComponent implements OnInit {
   onSubmit() {
     this.data.addBook(this.books.value);
     alert('Dodano książkę');
-    // window.location.reload();
+    window.location.reload();
   }
 
   ngOnInit() {

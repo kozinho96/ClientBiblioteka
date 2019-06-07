@@ -1,0 +1,29 @@
+<html>
+<body>
+<h1>Dodawanie Wypożyczenia</h1>
+<form [formGroup]="loan" (ngSubmit)="onSubmit()">
+
+  <label>
+    Data wypożyczenia:
+    <input type="date" formControlName="dataLoan">
+  </label>
+
+  <label>
+    Data zwrotu:
+    <input type="date" formControlName="dataReturn">
+  </label>
+
+  <label>
+    idUser:
+    <input type="text" formControlName="idUser">
+  </label>
+
+  <label>
+    idCopy:
+    <input type="text" formControlName="idCopy">
+  </label>
+
+  <button type="submit" [disabled]="!loan.valid">Dodaj wypożyczenie</button>
+</form>
+</body>
+</html>

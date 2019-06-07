@@ -1,0 +1,22 @@
+<body>
+<h1 style="color: white">Egzemplarze</h1>
+<a style="color: white" [routerLink]="['/copyAdd']">
+  <button>
+    Dodaj egzemplarz
+  </button>
+</a>
+<table>
+  <tr style='font-weight:bold;'>
+    <td>idBook</td>
+    <td>Tytuł</td>
+    <td>Autor</td>
+  </tr>
+  <tr *ngFor="let co of copy">
+    <td>{{co.idCopy}}</td>
+    <td>{{co.idBook.title}}</td>
+    <td>{{co.idBook.idAuthor.name}} {{co.idBook.idAuthor.lastName}}</td>
+  </tr>
+</table>
+
+
+

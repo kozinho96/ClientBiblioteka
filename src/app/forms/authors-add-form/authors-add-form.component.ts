@@ -20,7 +20,7 @@ export class AuthorsAddFormComponent implements OnInit {
   onSubmit() {
     this.data.addAuthors(this.authors.value);
     alert('Dodano autora');
-    // window.location.reload();
+    window.location.reload();
   }
 
   ngOnInit(): void {

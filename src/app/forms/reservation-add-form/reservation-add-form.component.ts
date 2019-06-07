@@ -21,7 +21,7 @@ export class ReservationAddFormComponent implements OnInit {
   onSubmit() {
     this.data.addReservation(this.reservation.value);
     alert('Dodano rezerwację');
-    window.location.reload();
+    // window.location.reload();
   }
 
   ngOnInit() {

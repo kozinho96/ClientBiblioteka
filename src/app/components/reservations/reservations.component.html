@@ -1,0 +1,20 @@
+<body>
+<h1 style="color: white">Rezerwacje</h1>
+<a style="color: white" [routerLink]="['/reservationAdd']">
+  <button>
+    Dodaj rezerwację
+  </button>
+</a>
+<table>
+  <tr style='font-weight:bold;'>
+    <td>Czytelnik</td>
+    <td>Data rezerwacji</td>
+    <td>Książka</td>
+  </tr>
+  <tr *ngFor="let re of reservation">
+    <td>{{re.idUser.name}} {{re.idUser.lastName}}</td>
+    <td>{{re.dateReserwation | date : "fullDate"}}</td>
+    <td>{{re.idBook.title}}</td>
+  </tr>
+</table>
+</body>
