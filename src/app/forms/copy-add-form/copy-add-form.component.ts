@@ -20,7 +20,7 @@ export class CopyAddFormComponent implements OnInit {
   onSubmit() {
     this.data.addCopy(this.copy.value);
     alert('Dodano egzemplarz');
-    // window.location.reload();
+    window.location.reload();
   }
 
   ngOnInit() {

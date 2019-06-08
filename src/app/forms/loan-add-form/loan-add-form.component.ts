@@ -22,7 +22,7 @@ export class LoanAddFormComponent implements OnInit {
   onSubmit() {
     this.data.addLoan(this.loan.value);
     alert('Dodano wypożyczenie');
-    // window.location.reload();
+    window.location.reload();
   }
 
   ngOnInit(): void {
